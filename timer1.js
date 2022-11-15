@@ -7,14 +7,9 @@ const timer = (arr) => {
   for (const item of arr) {
     let numItem = Number(item);
     if (numItem >= 0 && typeof numItem === 'number') {
-      console.log(numItem)
+      setTimeout(() => process.stdout.write('\x07'), numItem * 1000);
     }
   }
-
 }
 
 timer(args);
-
-//console.log(args)
-
-// process.stdout.write('\x07');
